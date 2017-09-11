@@ -1,0 +1,52 @@
+\section{Posets}
+  \PN \textbf{ORDEN PARCIAL:} Sea $P \neq \emptyset$ cualquiera, una relación binaria $\leq$ sobre $ P$ será llamada un
+  \textbf{orden parcial} sobre $P$ si se cumplen las siguientes condiciones:
+  \begin{enumerate}
+    \item $\leq$ es \textbf{reflexiva}, i.e $a \leq a \ \ \forall a \in P$.
+    \item $\leq$ es \textbf{antisimétrica}, i.e si $a \leq b$ y $b \leq a \Rightarrow a=b \ \ \forall a, b \in P$.
+    \item $\leq$ es \textbf{transitiva}, i.e si $a \leq b$ y $b \leq c \Rightarrow a \leq c \ \ \forall a, b, c \in P$.
+  \end{enumerate}
+
+  \PN \textbf{POSET:} Un conjunto parcialmente ordenado o poset sera un par $(P,\leq)$ donde:
+  \begin{itemize}
+    \item $P \neq \emptyset$ cualquiera
+    \item $\leq$ es un orden parcial sobre $P$
+  \end{itemize}
+
+  \PN \textbf{RELACIÓN BINARIA $<$:} Dado un poset $(P,\leq)$ definimos $<$ sobre $P$ de la siguiente manera:
+  \[
+    a < b \Leftrightarrow a \leq b \text{ y } a \neq b
+  \]
+
+  \PN \textbf{DEFINICIONES:} Sea $(P,\leq)$ un poset, entonces:
+  \begin{itemize}
+    \item \textbf{Maximal:} $a \in P$ es un elemento maximal de $(P,\leq)$ si $a \nless b, \ \forall b \in P$.
+    \item \textbf{Minimal:} $a \in P$ es un elemento minimal de $(P,\leq)$ si $b \nless a, \ \forall b \in P$.
+    \item \textbf{Máximo:} $a \in P$ es el elemento máximo de $(P,\leq)$ si $b \leq a, \ \forall b \in P$.
+    \item \textbf{Mínimo:} $a \in P$ es el elemento mínimo de $(P,\leq )$ si $a \leq b, \ \forall b \in P$.
+
+    \vspace{3mm}
+    \PN Dado $S \subseteq P$:
+    \item \textbf{Cota superior:} $a \in P$ es cota superior de $S$ en $(P,\leq)$ cuando $b \leq a, \ \forall b \in S$.
+    \item \textbf{Cota inferior:} $a \in P$ es cota inferior de $S$ en $(P,\leq)$ cuando $a \leq b, \ \forall b \in S$
+    \item \textbf{Supremo:} $a \in P$ será llamado supremo de $S$ en $(P,\leq)$ cuando se den las siguientes
+    condiciones:
+      \begin{enumerate}
+        \item $a$ es a cota superior de $S$ en $(P,\leq)$
+        \item Para cada $b \in P$, si $b$ es una cota superior de $S$ en $ (P,\leq) \Rightarrow a \leq b$.
+      \end{enumerate}
+    \item \textbf{Ínfimo:} $a \in P$ será llamado ínfimo de $S$ en $(P,\leq)$ cuando se den las siguientes
+    condiciones:
+      \begin{enumerate}
+        \item $a$ es a cota inferior de $S$ en $(P,\leq)$
+        \item Para cada $b \in P$, si $b$ es una cota inferior de $S$ en $ (P,\leq) \Rightarrow b \leq a$.
+      \end{enumerate}
+  \end{itemize}
+
+  \PN \textbf{HOMOMORFISMO E ISOMORFISMO DE POSETS:} Sean $(P,\leq)$ y $(P^{\prime},\leq^{\prime})$ posets
+  \begin{itemize}
+    \item Una función $F: P \rightarrow P^{\prime}$ será llamada un \textbf{homomorfismo} de $(P,\leq)$ en
+      $(P^{\prime},\leq^{\prime})$ si $ \forall x, y \in P$ se cumple que $x \leq y \Rightarrow F(x) \leq^{\prime} F(y)$.
+    \item Una función $F: P \rightarrow P^{\prime}$ será llamada un \textbf{isomorfismo} de $(P,\leq)$ en
+      $(P^{\prime},\leq^{\prime})$ si $F$ es \textbf{biyectiva} y tanto $F$ como $F^{-1}$ son \textbf{homomorfismos}.
+  \end{itemize}
