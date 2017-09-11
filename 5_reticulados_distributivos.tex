@@ -1,0 +1,36 @@
+\section{Reticulados Distributivos}
+
+  \PN \textbf{RETICULADO DISTRIBUTIVO:} Un reticulado se llamará \textbf{distributivo} cuando cumpla alguna de las
+  siguiente propiedades, para $x, y, z \in L$ cualquieras:
+  \begin{enumerate}
+    \item $x \ \IN \ (y \ \SU \ z) = (x \ \IN \ y) \ \SU \ (x \ \IN \ z)$
+    \item $x \ \SU \ (y \ \IN \ z) = (x \ \SU \ y) \ \IN \ (x \ \SU \ z)$
+  \end{enumerate}
+
+  \vspace{3mm}
+  \PN \textbf{FILTRO:} Un \textbf{filtro} de un reticulado $(L,\SU,\IN)$ será un subconjunto
+  $F \subseteq L$ tal que:
+  \begin{enumerate}
+    \item $F\neq \emptyset $
+    \item $x,y\in F\Rightarrow x\;\mathsf{i\;}y\in F$
+    \item $x\in F$ y $x\leq y\Rightarrow y\in F$.
+  \end{enumerate}
+
+  \vspace{3mm}
+  \PN \textbf{FILTRO GENERADO:} Dado un conjunto $S \subseteq L$, el \textbf{filtro generado por S} será el siguiente
+  conjunto:
+  \[
+    [S) = \{y \in L: y \geq s_{1} \ \IN \dotsc \ \IN \ s_{n} \text{, para algunos } s_{1}, \dotsc, s_{n} \in S, n \geq
+    1\}
+  \]
+
+  \vspace{3mm}
+  \PN \textbf{FILTRO PRIMO:} Un filtro $F$ de un reticulado $(L,\SU,\IN)$ será llamado \textbf{primo}
+  cuando se cumplan:
+  \begin{enumerate}
+    \item $F\neq L$
+    \item $x\;\mathsf{s\;}y\in F\Rightarrow x\in F$ o $y\in F$.
+  \end{enumerate}
+
+  \vspace{3mm}
+  \PN \textbf{ÁLGEBRA DE BOOLE:} Un \textbf{Álgebra de Boole} será un reticulado complementado y distributivo.
