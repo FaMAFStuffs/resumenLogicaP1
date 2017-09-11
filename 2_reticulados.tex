@@ -1,0 +1,82 @@
+\section{Reticulados}
+
+  \PN \textbf{RETICULADO:}
+  \begin{enumerate}
+    \item Un conjunto parcialmente ordenado $(L,\leq)$ es un reticulado si $\forall a, b \in L$, existen
+    $\sup(\{a,b\})$ e $\inf(\{a,b\})$. Se definen:
+    \[
+      \begin{array}{rcl}
+        a \ \SU \ b &=& \sup(\{a,b\}) \\
+        a \ \IN \ b &=& \inf(\{a,b\})
+      \end{array}
+    \]
+
+    \item Una terna $(L, \SU,\IN)$, donde $L \neq \emptyset$ cualquiera, $x, y, z \in L$ cualquieras y $\SU$ e
+    $\IN$ son dos operaciones binarias sobre $L$ será llamada reticulado cuando cumpla las siguientes identidades:
+    \begin{enumerate}
+      \item[(I1)] $x \ \SU \ x = x \ \IN \ x = x$
+      \item[(I2)] $x \ \SU \ y = y \ \SU \ x$
+      \item[(I3)] $x \ \IN \ y = y \ \IN \ x$
+      \item[(I4)] $(x \ \SU \ y) \ \SU \ z = x \ \SU \ (y \ \SU \ z)$
+      \item[(I5)] $(x \ \IN \ y) \ \IN \ z = x \ \IN \ (y \ \IN \ z)$
+      \item[(I6)] $x \ \SU \ (x \ \IN \ y) = x$
+      \item[(I7)] $x \ \IN \ (x \ \SU \ y) = x$
+    \end{enumerate}
+  \end{enumerate}
+
+  \vspace{3mm}
+  \PN \textbf{SUBRETICULADO:} Sea $(L, \SU, \IN)$ un reticulado. $S \neq \emptyset \subseteq L$ será
+  llamado \textbf{subuniverso} de $(L, \SU, \IN)$ si es cerrado bajo las operaciones $\SU$ e $\IN$. Diremos que el
+  reticulado $(S, \SU\mathrm{\mid}_{S \times S}, \IN\mathrm{\mid}_{S \times S})$ es \textbf{subreticulado} de
+  $(L, \SU, \IN)$.
+
+  \vspace{3mm}
+  \PN \textbf{HOMOMORFISMO E ISOMORFISMO DE RETICULADOS:} Sean $(L, \SU, \IN)$ y $(L^{\prime}, \SU^{\prime},
+  \IN^{\prime})$ reticulados.
+  \begin{itemize}
+    \item Una función $F: L \rightarrow L^{\prime}$ será llamada un \textbf{homomorfismo} de $(L, \SU, \IN)$ en
+      $(L^{\prime}, \SU^{\prime}, \IN^{\prime})$ si $\forall x, y \in L$ se cumple que:
+      \[
+        \begin{array}{rcl}
+          F(x \mathsf{\;s\;} y) &=& F(x) \ \SU^{\prime} \ F(y) \\
+          F(x \mathsf{\;i\;} y) &=& F(x) \ \IN^{\prime} \ F(y)
+        \end{array}
+      \]
+    \item Una función $F: L \rightarrow L^{\prime}$ será llamada un \textbf{isomorfismo} de $(L, \SU, \IN)$ en
+      $(L^{\prime}, \SU^{\prime}, \IN^{\prime})$ si $F$ es \textbf{biyectiva} y tanto $F$ como $F^{-1}$ son
+      \textbf{homomorfismos}.
+  \end{itemize}
+
+  \vspace{3mm}
+  \PN \textbf{CONGRUENCIAS DE RETICULADOS:} Sea $(L, \SU, \IN)$ un reticulado, una \textbf{congruencia} sobre
+  $(L, \SU, \IN)$ será una \textbf{relación de equivalencia} $\theta$ la cual cumpla:
+  \[
+    x \theta x^{\prime} \text{ y } y \theta y^{\prime} \Rightarrow (x \ \SU \ y) \theta (x^{\prime} \ \SU \ y^{\prime})
+    \text{ y } (x \ \IN \ y) \theta (x^{\prime} \ \IN \ y^{\prime})
+  \]
+
+  \PN Definimos, sobre $L/\theta$, $\mathsf{\tilde{s}}$ e $\mathsf{\tilde{\imath}}$, de la siguiente manera:
+  \[
+    \begin{array}{rcl}
+      x/\theta \ \mathsf{\tilde{s}} \ y/\theta &=& (x \ \SU \ y)/\theta \\
+      x/\theta \ \mathsf{\tilde{i}} \ y/\theta &=& (x \ \IN \ y)/\theta
+    \end{array}
+  \]
+
+  \vspace{3mm}
+  \PN \textbf{KERNEL:} Dada una función $F: A \rightarrow B$, llamaremos núcleo de $F$ a la relación binaria:
+  \[
+    \{(a,b) \in A^{2}: F(a) = F(b)\}
+  \]
+
+  \PN \textbf{Notación:} $\ker F$.
+
+  \vspace{3mm}
+  \PN \textbf{PROYECCIÓN CANÓNICA:} Si $R$ es una \textbf{relación de equivalencia} sobre un conjunto $A$, definimos la
+  función:
+  \[
+    \begin{array}{ccc}
+      \pi_{R}: && A \rightarrow A/R \\
+      && a \rightarrow a/R
+    \end{array}
+  \]
