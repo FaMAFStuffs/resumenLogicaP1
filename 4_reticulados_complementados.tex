@@ -1,0 +1,64 @@
+\section{Reticulados Complementados}
+
+  \PN \textbf{COMPLEMENTO:} Sea $(L,\mathsf{s},\mathsf{i},0,1)$ un reticulado acotado. Dado $a \in L$, diremos que
+  $a$ es \textbf{complementado}, si $\exists b \in L$ tal que:
+  \[
+    \begin{array}{rcl}
+      a \ \SU \ b &=& 1 \\
+      a \ \IN \ b &=& 0
+    \end{array}
+  \]
+
+  \PN \textbf{RETICULADO COMPLEMENTADO:} $(L, \SU, \IN, ^{c}, 0, 1)$, donde $L \neq \emptyset, \SU$ e $\IN$ son
+  operaciones binarias sobre $L$, $^{c}$ es una operación unaria sobre $L$ y $0, 1 \in L$, será llamada un
+  \textbf{reticulado complementado} si $(L, \SU, \IN, 0, 1)$ es un reticulado acotado y además:
+  \begin{enumerate}
+    \item[(I10)] $x \ \SU \ x^{c} = 1$, para cada $x \in L$
+    \item[(I11)] $x \ \IN \ x^{c} = 0$, para cada $x \in L$
+  \end{enumerate}
+
+  \vspace{3mm}
+  \PN \textbf{SUBRETICULADO COMPLEMENTADO:} Sea $(L, \SU, \IN, ^{c}, 0, 1)$ un reticulado complementado. $S \neq
+  \emptyset \subseteq L$ será llamado \textbf{subuniverso} de $(L, \SU, \IN, ^{c}, 0, 1)$ si es cerrado bajo las
+  operaciones $\SU$, $\IN$ y $^{c}$. Diremos que el reticulado complementado $(S, \SU\mathrm{\mid}_{S \times S},
+  \IN\mathrm{\mid}_{S \times S}, ^{c}\mathrm{\mid}_{S \times S}, 0, 1)$ es \textbf{subreticulado complementado} de $(L,
+  \SU, \IN, ^{c}, 0, 1)$.
+
+  \vspace{3mm}
+  \PN \textbf{HOMOMORFISMO E ISOMORFISMO DE RETICULADOS COMPLEMENTADOS:} Sean $(L, \SU, \IN, ^{c}, 0, 1)$ y
+  $(L^{\prime}, \SU^{\prime}, \IN^{\prime}, ^{c^{\prime}}, 0^{\prime}, 1^{\prime})$ reticulados complementados.
+  \begin{itemize}
+    \item Una función $F: L \rightarrow L^{\prime}$ será llamada un \textbf{homomorfismo} de $(L, \SU, \IN, 0, 1)$ en
+      $(L^{\prime}, \SU^{\prime}, \IN^{\prime}, 0^{\prime}, 1^{\prime})$ si $\forall x, y \in L$ se cumple que:
+      \[
+        \begin{array}{rcl}
+          F(x \mathsf{\;s\;} y) &=& F(x) \ \SU^{\prime} \ F(y) \\
+          F(x \mathsf{\;i\;} y) &=& F(x) \ \IN^{\prime} \ F(y) \\
+          F(x^{c}) &=& F(x)^{c^{\prime}} \\
+          F(0) &=& 0^{\prime} \\
+          F(1) &=& 1^{\prime}
+        \end{array}
+      \]
+    \item Una función $F: L \rightarrow L^{\prime}$ será llamada un \textbf{isomorfismo} de $(L, \SU, \IN, ^{c}, 0, 1)$
+      en $(L^{\prime}, \SU^{\prime}, \IN^{\prime}, ^{c^{\prime}}, 0^{\prime}, 1^{\prime})$ si $F$ es \textbf{biyectiva}
+      y tanto $F$ como $F^{-1}$ son \textbf{homomorfismos}.
+  \end{itemize}
+
+  \vspace{3mm}
+  \PN \textbf{CONGRUENCIAS DE RETICULADOS COMPLEMENTADO:} Sea $(L, \SU, \IN, 0, 1)$ un reticulado, una \textbf{congruencia}
+  sobre $(L, \SU, \IN, 0, 1)$ será una \textbf{relación de equivalencia} $\theta$ la cual cumpla:
+  \begin{enumerate}
+    \item $x \theta x^{\prime} \text{ y } y \theta y^{\prime} \Rightarrow (x \ \SU \ y) \theta (x^{\prime} \ \SU \
+      y^{\prime}) \text{ y } (x \ \IN \ y) \theta (x^{\prime} \ \IN \ y^{\prime})$
+    \item $x/\theta = y/\theta \Rightarrow x^{c}/\theta = y^{c}/\theta$
+  \end{enumerate}
+
+  \PN Definimos, sobre $L/\theta$, $\mathsf{\tilde{s}}, \mathsf{\tilde{i}}$ y $\mathsf{\tilde{^{c}}}$, de la siguiente
+  manera:
+  \[
+    \begin{array}{rcl}
+      x/\theta \ \mathsf{\tilde{s}} \ y/\theta &=& (x \ \SU \ y)/\theta \\
+      x/\theta \ \mathsf{\tilde{i}} \ y/\theta &=& (x \ \IN \ y)/\theta \\
+      (x/\theta)^{\mathsf{\tilde{^{c}}}} &=& x^{c}/\theta \\
+    \end{array}
+  \]
